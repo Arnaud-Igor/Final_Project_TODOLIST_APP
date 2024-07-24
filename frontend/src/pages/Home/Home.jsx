@@ -45,7 +45,7 @@ const Home = () => {
       const res = await axios.get(
         "https://mern-notes-app-api.vercel.app/api/note/all",
         {
-          withCredentials: true,
+          withCredentials: false,
         }
       );
 
@@ -73,7 +73,7 @@ const Home = () => {
     try {
       const res = await axios.delete(
         "https://mern-notes-app-api.vercel.app/api/note/delete/" + noteId,
-        { withCredentials: true }
+        { withCredentials: false }
       );
 
       if (res.data.success === false) {
@@ -94,7 +94,7 @@ const Home = () => {
         "https://mern-notes-app-api.vercel.app/api/note/search",
         {
           params: { query },
-          withCredentials: true,
+          withCredentials: false,
         }
       );
 
@@ -124,7 +124,7 @@ const Home = () => {
         "https://mern-notes-app-api.vercel.app/api/note/update-note-pinned/" +
           noteId,
         { isPinned: !noteData.isPinned },
-        { withCredentials: true }
+        { withCredentials: false }
       );
 
       if (res.data.success === false) {

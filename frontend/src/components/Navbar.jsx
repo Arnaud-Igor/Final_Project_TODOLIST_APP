@@ -34,7 +34,7 @@ const Navbar = ({ userInfo, onSearchNote, handleClearSearch }) => {
 
       const res = await axios.get(
         "https://mern-notes-app-api.vercel.app/api/auth/signout",
-        { withCredentials: true }
+        { withCredentials: false }
       );
 
       if (res.data.success === false) {
