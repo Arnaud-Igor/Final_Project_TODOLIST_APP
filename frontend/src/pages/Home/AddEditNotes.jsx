@@ -20,7 +20,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
       const res = await axios.post(
         "https://mern-notes-app-api.vercel.app/note/edit/" + noteId,
         { title, content, tags },
-        // { withCredentials: false }
+        { withCredentials: true }
       );
 
       console.log(res.data);
@@ -48,7 +48,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
       const res = await axios.post(
         "https://mern-notes-app-api.vercel.app/api/note/add",
         { title, content, tags },
-        // { withCredentials: false }
+        { withCredentials: true }
       );
 
       if (res.data.success === false) {
