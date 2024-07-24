@@ -40,7 +40,7 @@ const Login = () => {
       dispatch(signInStart());
 
       const res = await axios.post(
-        "http://localhost:3000/api/auth/signin",
+        "https://mern-notes-app-api.vercel.app/auth/signin",
         { email, password },
         { withCredentials: true }
       );
