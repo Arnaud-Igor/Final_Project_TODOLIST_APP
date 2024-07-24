@@ -43,7 +43,7 @@ const Home = () => {
   const getAllNotes = async () => {
     try {
       const res = await axios.get(
-        "https://mern-notes-app-api.vercel.app/api/note/all"
+        "https://mern-notes-app-api.vercel.app/api/note/all",
         { withCredentials: true }
       );
 
@@ -70,7 +70,7 @@ const Home = () => {
 
     try {
       const res = await axios.delete(
-        "https://mern-notes-app-api.vercel.app/api/note/delete/" + noteId
+        "https://mern-notes-app-api.vercel.app/api/note/delete/" + noteId,
         { withCredentials: true }
       );
 

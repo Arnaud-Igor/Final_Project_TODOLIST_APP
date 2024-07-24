@@ -18,7 +18,7 @@ const AddEditNotes = ({ onClose, noteData, type, getAllNotes }) => {
 
     try {
       const res = await axios.post(
-        "https://mern-notes-app-api.vercel.app/note/edit/" + noteId,
+        "https://mern-notes-app-api.vercel.app/api/note/edit/" + noteId,
         { title, content, tags },
         { withCredentials: true }
       );
