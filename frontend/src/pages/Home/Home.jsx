@@ -88,7 +88,7 @@ const Home = () => {
 
   const onSearchNote = async (query) => {
     try {
-      const res = await axios.get(
+      const res = await axios.put(
         "https://mern-notes-app-api.vercel.app/api/note/search",
         {
           params: { query },
