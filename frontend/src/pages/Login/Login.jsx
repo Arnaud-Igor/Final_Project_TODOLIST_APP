@@ -48,7 +48,7 @@ const Login = () => {
       if (res.data.success === false) {
         toast.error(res.data.message);
         console.log(res.data);
-        dispatch(signInFailure(data.message));
+        dispatch(signInFailure(res.data.message));
       }
 
       toast.success(res.data.message);
