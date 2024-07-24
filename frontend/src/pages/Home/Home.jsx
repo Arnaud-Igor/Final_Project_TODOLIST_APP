@@ -42,9 +42,12 @@ const Home = () => {
   // get all notes
   const getAllNotes = async () => {
     try {
-      const res = await axios.get("https://mern-notes-app-api.vercel.app/api/note/all", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://mern-notes-app-api.vercel.app/api/note/all"
+        // {
+        //   withCredentials: true,
+        // }
+      );
 
       if (res.data.success === false) {
         console.log(res.data);
@@ -69,8 +72,8 @@ const Home = () => {
 
     try {
       const res = await axios.delete(
-        "https://mern-notes-app-api.vercel.app/api/note/delete/" + noteId,
-        { withCredentials: true }
+        "https://mern-notes-app-api.vercel.app/api/note/delete/" + noteId
+        // { withCredentials: true }
       );
 
       if (res.data.success === false) {
@@ -87,10 +90,13 @@ const Home = () => {
 
   const onSearchNote = async (query) => {
     try {
-      const res = await axios.get("https://mern-notes-app-api.vercel.app/api/note/search", {
-        params: { query },
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://mern-notes-app-api.vercel.app/api/note/search",
+        {
+          params: { query },
+          // withCredentials: true,
+        }
+      );
 
       if (res.data.success === false) {
         console.log(res.data.message);
