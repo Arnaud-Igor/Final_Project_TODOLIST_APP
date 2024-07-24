@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const EmptyCard = ({ imgSrc, message }) => {
   return (
@@ -9,7 +9,7 @@ const EmptyCard = ({ imgSrc, message }) => {
         {message}
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default EmptyCard
+export default EmptyCard;

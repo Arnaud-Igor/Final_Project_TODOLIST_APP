@@ -1,6 +1,6 @@
-import React from "react"
-import { FaMagnifyingGlass } from "react-icons/fa6"
-import { IoMdClose } from "react-icons/io"
+import React from "react";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
 
 const SearchBar = ({ value, onChange, handleSearch, onClearSearch }) => {
   return (
@@ -25,7 +25,7 @@ const SearchBar = ({ value, onChange, handleSearch, onClearSearch }) => {
         onClick={handleSearch}
       />
     </div>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;

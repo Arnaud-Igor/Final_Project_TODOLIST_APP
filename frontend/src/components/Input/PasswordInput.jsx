@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6"
+import React, { useState } from "react";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 
 const PasswordInput = ({ value, onChange, placeholder }) => {
-  const [isShowPassword, setIsShowPassword] = useState(false)
+  const [isShowPassword, setIsShowPassword] = useState(false);
 
   const toggleShowPassword = () => {
-    setIsShowPassword(!isShowPassword)
-  }
+    setIsShowPassword(!isShowPassword);
+  };
 
   return (
     <div className="flex items-center bg-transparent border-[1.5px] px-5 rounded mb-3">
@@ -32,7 +32,7 @@ const PasswordInput = ({ value, onChange, placeholder }) => {
         />
       )}
     </div>
-  )
-}
+  );
+};
 
-export default PasswordInput
+export default PasswordInput;

@@ -1,5 +1,5 @@
-import React from "react"
-import { getInitials } from "../../utils/helper"
+import React from "react";
+import { getInitials } from "../../utils/helper";
 
 const ProfileInfo = ({ onLogout, userInfo }) => {
   return (
@@ -19,7 +19,7 @@ const ProfileInfo = ({ onLogout, userInfo }) => {
         Logout
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default ProfileInfo
+export default ProfileInfo;

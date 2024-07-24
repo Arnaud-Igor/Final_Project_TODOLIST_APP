@@ -1,7 +1,7 @@
-import React from "react"
-import { FaTags } from "react-icons/fa6"
-import { MdCreate, MdDelete, MdOutlinePushPin } from "react-icons/md"
-import moment from "moment"
+import React from "react";
+import { FaTags } from "react-icons/fa6";
+import { MdCreate, MdDelete, MdOutlinePushPin } from "react-icons/md";
+import moment from "moment";
 
 const NoteCard = ({
   title,
@@ -51,7 +51,7 @@ const NoteCard = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NoteCard
+export default NoteCard;
