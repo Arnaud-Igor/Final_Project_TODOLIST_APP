@@ -117,7 +117,7 @@ const Home = () => {
       const res = await axios.put(
         "https://mern-notes-app-api.vercel.app/api/note/update-note-pinned/" + noteId,
         { isPinned: !noteData.isPinned },
-        { withCredentials: false }
+        { withCredentials: true }
       );
 
       if (res.data.success === false) {
