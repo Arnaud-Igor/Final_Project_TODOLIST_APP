@@ -52,11 +52,14 @@ export const signin = async (req, res, next) => {
 
     const { password: pass, ...rest } = validUser._doc;
 
-    res.cookie("access_token", token, { httpOnly: true, secure: true }).status(200).json({
-      success: true,
-      message: "Login Successful!",
-      rest,
-    });
+    res
+      .cookie("access_token", token, { httpOnly: true, secure: true })
+      .status(200)
+      .json({
+        success: true,
+        message: "Login Successful!",
+        rest,
+      });
   } catch (error) {
     next(error);
   }
@@ -64,7 +67,10 @@ export const signin = async (req, res, next) => {
 
 export const signout = async (req, res, next) => {
   try {
-    res.clearCookie("access_token");
+    res.clearCookie("access_token", {
+      httpOnly: true,
+      secure: true, // Ensure cookie is only sent over HTTPS
+    });
 
     res.status(200).json({
       success: true,
