@@ -37,8 +37,8 @@ const Signup = () => {
     try {
       const res = await axios.post(
         "https://mern-notes-app-api.vercel.app/api/auth/signup",
-        { username: name, email, password },
-        { withCredentials: true }
+        { username: name, email, password }
+        // { withCredentials: true }
       );
 
       if (res.data.success === false) {
