@@ -1,5 +1,5 @@
 import express from "express";
-import { verifyToken } from "../utils/verifyUser.js";
+// import { verifyToken } from "../utils/verifyUser.js";
 import {
   addNote,
   deleteNote,
@@ -11,11 +11,11 @@ import {
 
 const router = express.Router();
 
-router.post("/add", verifyToken, addNote);
-router.put("/edit/:noteId", verifyToken, editNote);
-router.get("/all", verifyToken, getAllNotes);
-router.delete("/delete/:noteId", verifyToken, deleteNote);
-router.put("/update-note-pinned/:noteId", verifyToken, updateNotePinned);
-router.put("/search", verifyToken, searchNote);
+router.post("/add", addNote);
+router.put("/edit/:noteId", editNote);
+router.get("/all", getAllNotes);
+router.delete("/delete/:noteId", deleteNote);
+router.put("/update-note-pinned/:noteId", updateNotePinned);
+router.put("/search", searchNote);
 
 export default router;
